@@ -1,0 +1,19 @@
+{
+  "name": "m20-chelsea-luevano-portfolio",
+  "version": "1.0.0",
+  "description": "This is a single-page application to showcase my professional portfolio and is built using React. This is a part of the Module 20 Challenge for the Ohio State University Coding Bootcamp.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChelseaLuevano/M20-Chelsea-Luevano-Portfolio.git"
+  },
+  "author": "Chelsea Luevano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChelseaLuevano/M20-Chelsea-Luevano-Portfolio/issues"
+  },
+  "homepage": "https://github.com/ChelseaLuevano/M20-Chelsea-Luevano-Portfolio#readme"
+}
