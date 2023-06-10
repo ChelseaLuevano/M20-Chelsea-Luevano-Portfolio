@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import Project from './Project';
+import Header from './Header';
 
 function Portfolio() {
 
-
     return (
-        <Project />
+        <div>
+            <Header />
+            <Project />
+        </div>
     )
 }
 
