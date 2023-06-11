@@ -1,19 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-function Navigation() {
 
-    const aboutMe = "About Me"
-
-    const portfolio = "Portfolio"
-
-    const contactMe = "ContactMe"
-
-    const resume = "Resume"
-
+function Navigation({ currentPage, handlePageChange }) {
     return (
         <nav>
             <ul className='flex flex-row place-content-end space-x-10 mr-4'>
-                <li>{aboutMe}</li>
+                <li>
+                    <Link to = '/about' onClick={() => handleNavigation('/about')} className={activeNavItem === '/about' ? 'active' : ''}> About Me</Link>
+                </li>
                 <li>{portfolio}</li>
                 <li>{contactMe}</li>
                 <li>{resume}</li>

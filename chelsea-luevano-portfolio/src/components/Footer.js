@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import githubLogo from '../github-mark.svg'
+import githubLogo from './github-mark.svg'
 
 function Footer() {
 
