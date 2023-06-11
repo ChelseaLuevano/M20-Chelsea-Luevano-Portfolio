@@ -7,7 +7,7 @@ function Header({currentPage, handlePageChange}) {
     return (
         <header>
             <h1>{portfolioName}</h1>
-            <Navigation />
+            <Navigation handlePageChange={handlePageChange} />
         </header>
     )
 }
