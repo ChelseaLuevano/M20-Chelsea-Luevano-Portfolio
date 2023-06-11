@@ -1,17 +1,24 @@
 import React, { useState } from 'react';
-import Project from './Project';
-import Header from './Header';
-import Footer from './Footer'
 
 function Portfolio() {
+    // const [project, setProject] = useState([])
+
+    const projectTitle = "projectTitle"
+    const deployedAppLink = "google.com"
 
     return (
         <div>
-            <Header />
-            <Project />
-            <Footer />
+            <li>
+                <h1>{projectTitle}</h1>
+                <img
+                    alt = "placeholder"
+                    className="project-image"
+                    src={deployedAppLink}
+                    // where/how do I add GitHub Link
+                />
+            </li>    
         </div>
-    )
+    );
 }
 
 export default Portfolio;

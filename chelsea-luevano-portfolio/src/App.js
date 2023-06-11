@@ -1,12 +1,12 @@
 // import logo from './logo.svg';
 import './App.css';
-import Portfolio from '../src/components/Portfolio'
+import MainPage from './components/MainPage'
 
 
 function App() {
   return (
-    <div className="Portfolio">
-      <Portfolio />
+    <div className="mainPage">
+      <MainPage />
     </div>
   );
 }

@@ -5,10 +5,10 @@ function Header() {
 
     const portfolioName = "Chelsea Luevano"
     return (
-        <div>
+        <header>
             <h1>{portfolioName}</h1>
             <Navigation />
-        </div>
+        </header>
     )
 }
 
