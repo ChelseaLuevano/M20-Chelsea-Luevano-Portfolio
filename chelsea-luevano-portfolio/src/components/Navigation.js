@@ -4,13 +4,30 @@ import React from 'react';
 function Navigation({ currentPage, handlePageChange }) {
     return (
         <nav>
-            <ul className='flex flex-row place-content-end space-x-10 mr-4'>
-                <li>
-                    <Link to = '/about' onClick={() => handleNavigation('/about')} className={activeNavItem === '/about' ? 'active' : ''}> About Me</Link>
+            <ul className=' nav flex flex-row place-content-end space-x-10 mr-4'>
+                <li className="nav-item">
+                    <a href="#aboutme"
+                        onClick={() => handlePageChange('AboutMe')}
+                        className={currentPage === 'AboutMe' ? 'nav-link active' : 'nav-link'}
+                    >
+                        About Me
+                    </a>
                 </li>
-                <li>{portfolio}</li>
-                <li>{contactMe}</li>
-                <li>{resume}</li>
+                <li className="nav-item">
+                   <a 
+                    href="#portfolio"
+                    onClick={() => handlePageChange('Portfolio')}
+                    className={currentPage ==='Portfolio' ? 'nav-link active' : 'nav-link'}
+                   >
+                       Portfolio
+                    </a> 
+                </li>
+                {/* <li className="nav-item">
+                   Contact Me
+                </li>
+                <li className="nav-item">
+                   Resume
+                </li> */}
             </ul>
         </nav>
     )

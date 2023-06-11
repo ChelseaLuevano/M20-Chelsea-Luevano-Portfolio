@@ -5,10 +5,13 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    // font-family: {
+    //   'segoe': ['Segoe UI']
+    // }
   },
   colors: {
     white: '#6D929B',
-    green: ''
+    green: '',
   },
   plugins: [],
 }

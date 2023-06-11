@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Navigation from './Navigation';
 
-function Header() {
+function Header({currentPage, handlePageChange}) {
 
     const portfolioName = "Chelsea Luevano"
     return (

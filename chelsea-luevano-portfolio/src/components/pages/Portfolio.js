@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
-function Portfolio() {
-    // const [project, setProject] = useState([])
+export default function Portfolio() {
 
     const projectTitle = "projectTitle"
     const deployedAppLink = "google.com"
@@ -21,4 +20,3 @@ function Portfolio() {
     );
 }
 
-export default Portfolio;
