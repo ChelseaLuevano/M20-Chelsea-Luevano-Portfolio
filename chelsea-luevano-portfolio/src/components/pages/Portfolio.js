@@ -6,7 +6,7 @@ export default function Portfolio() {
     const deployedAppLink = "google.com"
 
     return (
-        <div>
+        <div id="Portfolio">
             <li>
                 <h1>{projectTitle}</h1>
                 <img

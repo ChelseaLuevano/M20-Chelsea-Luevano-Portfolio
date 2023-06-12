@@ -6,7 +6,7 @@ function Navigation({ currentPage, handlePageChange }) {
         <nav>
             <ul className=' nav flex flex-row place-content-end space-x-10 mr-4'>
                 <li className="nav-item">
-                    <a href="#aboutme"
+                    <a href="#AboutMe"
                         onClick={() => handlePageChange('AboutMe')}
                         className={currentPage === 'AboutMe' ? 'nav-link active' : 'nav-link'}
                     >
@@ -15,7 +15,7 @@ function Navigation({ currentPage, handlePageChange }) {
                 </li>
                 <li className="nav-item">
                    <a 
-                    href="#portfolio"
+                    href="#Portfolio"
                     onClick={() => handlePageChange('Portfolio')}
                     className={currentPage ==='Portfolio' ? 'nav-link active' : 'nav-link'}
                    >
