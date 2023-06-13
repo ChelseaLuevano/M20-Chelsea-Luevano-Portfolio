@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ProfilePic from './ProfilePic1.jpg'
 
 export default function AboutMe() {

@@ -17,7 +17,7 @@ function Navigation({ currentPage, handlePageChange }) {
                    <a 
                     href="#Portfolio"
                     onClick={() => handlePageChange('Portfolio')}
-                    className={currentPage ==='Portfolio' ? 'nav-link active' : 'nav-link'}
+                    className={currentPage ==='Portfolio' ? 'nav-link active' : 'nav-link'} 
                    >
                        Portfolio
                     </a> 
@@ -27,6 +27,7 @@ function Navigation({ currentPage, handlePageChange }) {
                     href="#ContactMe"
                     onClick={() => handlePageChange('ContactMe')}
                     className={currentPage ==='ContactMe' ? 'nav-link active' : 'nav-link'}
+                    style={{ marginRight: '4em' }} 
                     >
                    Contact Me
                    </a>
