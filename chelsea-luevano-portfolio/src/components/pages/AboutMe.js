@@ -4,7 +4,7 @@ import ProfilePic from './ProfilePic1.jpg'
 export default function AboutMe() {
 
     return (
-        <div id="AboutMe">
+        <div id="AboutMe" className="m-10">
             <h2>About Me</h2>
             <img className='w-1/6' src={ProfilePic} alt="ProfilePic"/>
             <p>I am an Agile Leader currently in Financial Technology Industry. 

@@ -8,7 +8,7 @@ export default function Portfolio() {
     const deployedAppLink = "google.com"
 
     return (
-        <div id="Portfolio">
+        <div id="Portfolio" className="m-10">
             <ul className="grid grid-cols-2 gap-10">
                 <li>
                     <h1>PutASporkInIt</h1>
