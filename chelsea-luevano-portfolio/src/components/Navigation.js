@@ -22,10 +22,16 @@ function Navigation({ currentPage, handlePageChange }) {
                        Portfolio
                     </a> 
                 </li>
-                {/* <li className="nav-item">
-                   Contact Me
-                </li>
                 <li className="nav-item">
+                    <a 
+                    href="#ContactMe"
+                    onClick={() => handlePageChange('ContactMe')}
+                    className={currentPage ==='ContactMe' ? 'nav-link active' : 'nav-link'}
+                    >
+                   Contact Me
+                   </a>
+                </li>
+                {/* <li className="nav-item">
                    Resume
                 </li> */}
             </ul>
