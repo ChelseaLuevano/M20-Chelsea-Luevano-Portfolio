@@ -9,7 +9,7 @@ export default function Portfolio() {
 
     return (
         <div id="Portfolio">
-            <ul>
+            <ul className="grid grid-cols-2 gap-10">
                 <li>
                     <h1>PutASporkInIt</h1>
                 <a className="project " href="https://www.putasporkinit.co/">
