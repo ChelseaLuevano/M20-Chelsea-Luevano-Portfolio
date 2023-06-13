@@ -27,14 +27,20 @@ function Navigation({ currentPage, handlePageChange }) {
                     href="#ContactMe"
                     onClick={() => handlePageChange('ContactMe')}
                     className={currentPage ==='ContactMe' ? 'nav-link active' : 'nav-link'}
-                    style={{ marginRight: '4em' }} 
+                    style={{ marginRight: '1em' }} 
                     >
                    Contact Me
                    </a>
                 </li>
-                {/* <li className="nav-item">
-                   Resume
-                </li> */}
+                <li className="nav-item">
+                    <a 
+                    href="#Resume"
+                    onClick={() => handlePageChange('Resume')}
+                    className={currentPage ==='Resume' ? 'nav-link active' : 'nav-link'}
+                    >
+                    Resume
+                    </a>
+                </li>
             </ul>
         </nav>
     )

@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import AboutMe from './pages/AboutMe';
 import Portfolio from './pages/Portfolio';
 import ContactMe from './pages/ContactMe';
+import Resume from './pages/Resume'
 import Header from './Header';
-import Navigation from './Navigation';
 import Footer from './Footer'
 
 export default function PortfolioContainer() {
@@ -18,6 +18,9 @@ export default function PortfolioContainer() {
         }
         if (currentPage === 'ContactMe') {
             return <ContactMe />;
+        }
+        if (currentPage === 'Resume') {
+            return <Resume />;
         }
     }
 
