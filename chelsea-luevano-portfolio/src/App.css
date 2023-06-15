@@ -42,9 +42,16 @@
 }
 
 .portfolio-container {
-  background-color: cream
+  background-color: #fff1f2
 }
 
+h1 {
+  color: #fecdd3;
+  font-weight: bolder;
+}
+a {
+  color: #a5b4fc
+}
 /* .footer-logo {
   display: flex;
   justify-content: space-between;
