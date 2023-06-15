@@ -1,11 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PutASporkInIt from './putasporkinit-co-2023-05-09.png';
 import MoveMeScene from './MoveMe-Scene-Project.png';
 
 export default function Portfolio() {
-
-    
-    const deployedAppLink = "google.com"
 
     return (
         <div id="Portfolio" className="m-10">
@@ -21,7 +18,7 @@ export default function Portfolio() {
                 </li>  
                 <li>
                     <h1>MoveMeScene</h1>
-                <a className="project ">
+                <a className="project " href="https://trengland.github.io/MoveMe-Scene/">
                         <img
                             src={MoveMeScene}
                             alt = "MoveMeScene Project"

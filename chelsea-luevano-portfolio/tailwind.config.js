@@ -11,7 +11,14 @@ module.exports = {
   },
   colors: {
     white: '#6D929B',
-    green: '',
+    cream: '#f8edeb',
+    blush: '#ffb5a7',
+    lightPink: '#fcd5ce',
+    vanillaOrange: '#f9dcc4',
+    popsicleOrange: '#fec89a',
+    rose: '#fff1f2'
+
+
   },
   plugins: [
     

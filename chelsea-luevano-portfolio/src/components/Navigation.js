@@ -3,7 +3,7 @@ import React from 'react';
 
 function Navigation({ currentPage, handlePageChange }) {
     return (
-        <nav>
+        <nav className='bg-green'>
             <ul className=' nav flex flex-row place-content-end space-x-10 mr-4'>
                 <li className="nav-item">
                     <a href="#AboutMe"
