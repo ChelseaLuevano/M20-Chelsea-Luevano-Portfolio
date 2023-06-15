@@ -8,7 +8,7 @@ function Navigation({ currentPage, handlePageChange }) {
                 <li className="nav-item">
                     <a href="#AboutMe"
                         onClick={() => handlePageChange('AboutMe')}
-                        className={currentPage === 'AboutMe' ? 'nav-link active' : 'nav-link'}
+                        className={currentPage === 'AboutMe' ? 'nav-link active:bg-violet-700' : 'nav-link'}
                     >
                         About Me
                     </a>
