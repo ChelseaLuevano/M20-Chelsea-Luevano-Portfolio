@@ -3,7 +3,7 @@ import React, {useState } from 'react';
 
 function Navigation({ currentPage, handlePageChange }) {
     
-    const [activeLink, setActiveLink] = useState('about')
+    const [activeLink, setActiveLink] = useState('AboutMe')
 
     const handleLinkClick = (link) => {
         setActiveLink(link);
