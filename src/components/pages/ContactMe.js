@@ -22,11 +22,11 @@ export default function ContactMe() {
     //     };
     // }
 
-    const [state, setState] = useState(initialState);
+    // const [state, setState] = useState(initialState);
 
-    onSubmit = e => {
-        e.preventDefault();
-    };
+    // onSubmit = e => {
+    //     e.preventDefault();
+    // };
 
     return (
         <div id="ContactMe" className="m-10">
@@ -53,7 +53,7 @@ export default function ContactMe() {
                     method="POST" 
                     className="mx-auto mt-16 max-w-xl sm:mt-20 
                     form-inside-input" 
-                    onSubmit={onSubmit}
+                    // onSubmit={onSubmit}
                      noValidate>
                     <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                         <div>

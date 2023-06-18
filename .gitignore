@@ -131,3 +131,11 @@ dist
 
 # Used this statement because I am working on Mac
 **/.DS_Store
+build/asset-manifest.json
+build/index.html
+build/static/js/main.7955f4a3.js
+build/static/js/main.7955f4a3.js.LICENSE.txt
+build/static/js/main.7955f4a3.js.map
+build/static/js/main.dea0ab96.js
+build/static/js/main.dea0ab96.js.LICENSE.txt
+build/static/js/main.dea0ab96.js.map
