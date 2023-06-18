@@ -14,7 +14,7 @@ This is a single-page application to showcase my professional portfolio and is b
 [![Express.js](https://img.shields.io/badge/Express.js-v4.17.1-lightgrey)](https://expressjs.com/)
 [![IndexedDB](https://img.shields.io/badge/IndexDB-v6.1.2-pink)](https://www.npmjs.com/package/idb)
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow)](https://www.ecma-international.org/ecma-262/)
-[![Node.js](https://img.shields.io/badge/Node.js-v8.11.0-green)](https://nodejs.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-v16.16.0-green)](https://nodejs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v2.2.15-blue)](https://tailwindcss.com/)
 
 
