@@ -1,6 +1,5 @@
 import React, {useState } from 'react';
 
-
 function Navigation({ currentPage, handlePageChange }) {
     
     const [activeLink, setActiveLink] = useState('AboutMe')
@@ -36,7 +35,7 @@ function Navigation({ currentPage, handlePageChange }) {
                     className={currentPage ==='ContactMe' ? 'nav-link active' : 'nav-link'}
                     style={{ marginRight: '1em' }} 
                     >
-                   Contact Me
+                        Contact Me
                    </a>
                 </li>
                 <li className="nav-item">
@@ -45,7 +44,7 @@ function Navigation({ currentPage, handlePageChange }) {
                     onClick={() => handlePageChange('Resume')}
                     className={currentPage ==='Resume' ? 'nav-link active' : 'nav-link'}
                     >
-                    Resume
+                        Resume
                     </a>
                 </li>
             </ul>
