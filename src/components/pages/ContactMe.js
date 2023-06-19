@@ -1,32 +1,54 @@
 import React, { useState } from 'react';
-import { ChevronDownIcon } from '@heroicons/react/solid';
-// import { Switch } from '@headlessui/react';
-
 
 export default function ContactMe() {
-    // const [agreed, setAgreed] = useState(false)
 
-    // const txtFieldState = {
-    //     value: "",
-    //     valid: true,
-    //     typeMismatch: false,
-    //     errMsg: "" //this is where our error message gets across
-    // };
+    const txtFieldState = {
+        value: "",
+        valid: true,
+        typeMismatch: false,
+        errMsg: "" //this is where our error message gets across
+    };
     
-    // class InitialState new {
-    //     state = {
-    //         email: { ...txtFieldState, fieldName: "Email", required: true, requiredTxt: "Email is required", formatErrorTxt: "Incorrect email format" },
-    //         firstname: { ...txtFieldState, fieldName: "First Name", required: true, requiredTxt: "First Name is required" },
-    //         lastname: { ...txtFieldState, fieldName: "Last Name", required: false, requiredTxt: "Last Name is required" },
-    //         allFieldsValid: false
-    //     };
+    
+    let initialState = {
+            email: { ...txtFieldState, fieldName: "Email", required: true, requiredTxt: "Email is required", formatErrorTxt: "Incorrect email format" },
+            firstname: { ...txtFieldState, fieldName: "First Name", required: true, requiredTxt: "First Name is required" },
+            lastname: { ...txtFieldState, fieldName: "Last Name", required: false, requiredTxt: "Last Name is required" },
+            allFieldsValid: false
+        };
+    
+
+    const [state, setState] = useState(initialState);
+
+    const onSubmit = (e) => {
+        e.preventDefault();
+        console.log(state)
+    };
+
+    function handleInputChange(event) {
+        // let currentInputId = event.target.name
+        // console.log(currentInputId)
+        // let updatedInput = {currentInputId: event.target.value}
+        const fieldName = event.target.name;
+        const fieldValue = event.target.value;
+        setState(previousState => ({
+            ...previousState, [fieldName]: {
+            ...previousState, value: fieldValue
+            } 
+        }));
+    }
+
+    // function handleEmailInputChange(event) {
+    //     // let currentInputId = event.target.name
+    //     // console.log(currentInputId)
+    //     // let updatedInput = {currentInputId: event.target.value}
+    //     setState({email: event.target.value})
     // }
 
-    // const [state, setState] = useState(initialState);
-
-    // onSubmit = e => {
-    //     e.preventDefault();
-    // };
+    // function handleLastNameInputChange(event) {
+    //     console.log(event.target.value)
+    //     setState({lastname: event.target.value})
+    // }
 
     return (
         <div id="ContactMe" className="m-10">
@@ -53,7 +75,7 @@ export default function ContactMe() {
                     method="POST" 
                     className="mx-auto mt-16 max-w-xl sm:mt-20 
                     form-inside-input" 
-                    // onSubmit={onSubmit}
+                    onSubmit={onSubmit}
                      noValidate>
                     <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                         <div>
@@ -64,7 +86,7 @@ export default function ContactMe() {
                                 <input
                                     type="text"
                                     name="first-name"
-                                    id="first-name"
+                                    id="firstname"
                                     required
                                     autoComplete="given-name"
                                     className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -79,9 +101,10 @@ export default function ContactMe() {
                                 <input
                                     type="text"
                                     name="last-name"
-                                    id="last-name"
+                                    id="lastname"
                                     required
                                     autoComplete="family-name"
+                                    onChange = {handleInputChange}
                                     className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                 />
                             </div>
@@ -111,6 +134,7 @@ export default function ContactMe() {
                                     id="email"
                                     required
                                     autoComplete="email"
+                                    onChange = {handleInputChange}
                                     className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                 />
                             </div>

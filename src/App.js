@@ -6,9 +6,9 @@ import PortfolioContainer from './components/PortfolioContainer'
 
 function App() {
   return (
-    <div className="mainPage">
+    <>
       <PortfolioContainer />
-    </div>
+    </>
   );
 }
 
