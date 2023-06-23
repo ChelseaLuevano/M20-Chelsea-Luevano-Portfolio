@@ -1,15 +1,19 @@
 import React from 'react';
 import PutASporkInIt from './putasporkinit-co-2023-05-09.png';
 import MoveMeScene from './MoveMe-Scene-Project.png';
+import SocialMediaAPI from './M-18NoSQLSocialMediaAPIPreview.png'
+import SQLEmployeeTracker from './SQL-Employee-Tracker.png'
+import SVGLogoMaker from './M10-SVG-Logo-Maker.png'
 
 export default function Portfolio() {
 
     return (
         <div id="Portfolio" className="m-10">
-            <ul className="grid grid-cols-2 gap-10">
+            <h2 className=" text-3xl" > Group Projects </h2>
+            <ul className="grid grid-cols-2 gap-10 padding-30%">
                 <li>
-                    <h1>PutASporkInIt</h1>
-                <a className="project " href="https://www.putasporkinit.co/">
+                    <h3 className="text-2xl">PutASporkInIt</h3>
+                <a className="project" href="https://www.putasporkinit.co/">
                         <img
                             src={PutASporkInIt}
                             alt = "PutASporkInIt Project"
@@ -17,15 +21,52 @@ export default function Portfolio() {
                     </a> 
                 </li>  
                 <li>
-                    <h1>MoveMeScene</h1>
-                <a className="project " href="https://trengland.github.io/MoveMe-Scene/">
+                    <h3 className="text-2xl">MoveMeScene</h3>
+                <a className="project" href="https://trengland.github.io/MoveMe-Scene/">
                         <img
                             src={MoveMeScene}
                             alt = "MoveMeScene Project"
                     />
                     </a> 
                 </li> 
-            </ul>     
+            </ul>
+
+            <br></br>
+            <br></br>
+
+
+            <h2 className="text-3xl" > Solo Projects </h2>
+            <ul className="grid grid-cols-2 gap-10 padding-30%">
+                <li>
+                    <h3 className="text-2xl">NoSQL Social Media API</h3>
+                <a className="project" href="https://github.com/ChelseaLuevano/M18-NoSQL-Social-Network-API">
+                        <img
+                            src={SocialMediaAPI}
+                            alt = "NoSQL SocialMediaAPI Project"
+                    />
+                    </a> 
+                </li>  
+                <li>
+                    <h3 className="text-2xl">SQL Employee Tracker in Command Line</h3>
+                <a className="project" href="https://github.com/ChelseaLuevano/M12-Employee-Tracker">
+                        <img
+                            src={SQLEmployeeTracker}
+                            alt = "SQL Employee Tracker in Terminal Project"
+                    />
+                    </a> 
+                </li> 
+                <li>
+                    <h3 className="">SVG Logo Maker in Command Line</h3>
+                <a className="project" href="https://github.com/ChelseaLuevano/M10-SVG-Logo-Maker">
+                        <img
+                            src={SVGLogoMaker}
+                            alt = "SVG Logo Maker in Command Line Project"
+                    />
+                    </a> 
+                </li> 
+            </ul>
+
+
         </div>
     );
 }
