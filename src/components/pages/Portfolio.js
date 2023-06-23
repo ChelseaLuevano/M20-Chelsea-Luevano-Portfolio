@@ -8,9 +8,10 @@ import SVGLogoMaker from './M10-SVG-Logo-Maker.png'
 export default function Portfolio() {
 
     return (
-        <div id="Portfolio" className="m-10">
+        <div id="Portfolio" className="m-20 p-5">
             <h2 className=" text-3xl" > Group Projects </h2>
-            <ul className="grid grid-cols-2 gap-10 padding-30%">
+            <br></br>
+            <ul className="grid grid-cols-2 gap-20">
                 <li>
                     <h3 className="text-2xl">PutASporkInIt</h3>
                 <a className="project" href="https://www.putasporkinit.co/">
@@ -36,7 +37,8 @@ export default function Portfolio() {
 
 
             <h2 className="text-3xl" > Solo Projects </h2>
-            <ul className="grid grid-cols-2 gap-10 padding-30%">
+            <br></br>
+            <ul className="grid grid-cols-2 gap-20 ">
                 <li>
                     <h3 className="text-2xl">NoSQL Social Media API</h3>
                 <a className="project" href="https://github.com/ChelseaLuevano/M18-NoSQL-Social-Network-API">
@@ -56,7 +58,7 @@ export default function Portfolio() {
                     </a> 
                 </li> 
                 <li>
-                    <h3 className="">SVG Logo Maker in Command Line</h3>
+                    <h3 className="text-2xl">SVG Logo Maker in Command Line</h3>
                 <a className="project" href="https://github.com/ChelseaLuevano/M10-SVG-Logo-Maker">
                         <img
                             src={SVGLogoMaker}
