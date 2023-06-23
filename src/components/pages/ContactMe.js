@@ -2,53 +2,16 @@ import React, { useState } from 'react';
 
 export default function ContactMe() {
 
-    const txtFieldState = {
-        value: "",
-        valid: true,
-        typeMismatch: false,
-        errMsg: "" //this is where our error message gets across
-    };
-    
-    
-    let initialState = {
-            email: { ...txtFieldState, fieldName: "Email", required: true, requiredTxt: "Email is required", formatErrorTxt: "Incorrect email format" },
-            firstname: { ...txtFieldState, fieldName: "First Name", required: true, requiredTxt: "First Name is required" },
-            lastname: { ...txtFieldState, fieldName: "Last Name", required: false, requiredTxt: "Last Name is required" },
-            allFieldsValid: false
-        };
-    
-
-    const [state, setState] = useState(initialState);
+    const [firstName, setFirstName] = useState('')
+    const [lastName, setLastName] = useState('')
+    const [email, setEmail] = useState('')
+    const [message, setMessage] = useState('');
 
     const onSubmit = (e) => {
         e.preventDefault();
-        console.log(state)
+        console.log(firstName, lastName, email, message)
     };
 
-    function handleInputChange(event) {
-        // let currentInputId = event.target.name
-        // console.log(currentInputId)
-        // let updatedInput = {currentInputId: event.target.value}
-        const fieldName = event.target.name;
-        const fieldValue = event.target.value;
-        setState(previousState => ({
-            ...previousState, [fieldName]: {
-            ...previousState, value: fieldValue
-            } 
-        }));
-    }
-
-    // function handleEmailInputChange(event) {
-    //     // let currentInputId = event.target.name
-    //     // console.log(currentInputId)
-    //     // let updatedInput = {currentInputId: event.target.value}
-    //     setState({email: event.target.value})
-    // }
-
-    // function handleLastNameInputChange(event) {
-    //     console.log(event.target.value)
-    //     setState({lastname: event.target.value})
-    // }
 
     return (
         <div id="ContactMe" className="m-10">
@@ -68,15 +31,15 @@ export default function ContactMe() {
                 <div className="mx-auto max-w-2xl text-center">
                     <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Contact Me</h2>
                     <p className="mt-2 text-lg leading-8 text-gray-600">
-                       Let's chat!
+                        Let's chat!
                     </p>
                 </div>
                 <form action="#"
-                    method="POST" 
+                    method="POST"
                     className="mx-auto mt-16 max-w-xl sm:mt-20 
-                    form-inside-input" 
+                    form-inside-input"
                     onSubmit={onSubmit}
-                     noValidate>
+                    noValidate>
                     <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                         <div>
                             <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-gray-900">
@@ -86,8 +49,10 @@ export default function ContactMe() {
                                 <input
                                     type="text"
                                     name="first-name"
-                                    id="firstname"
+                                    id="firstName"
                                     required
+                                    onChange={(e) => { setFirstName(e.target.value) }}
+                                    value={firstName}
                                     autoComplete="given-name"
                                     className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                 />
@@ -104,25 +69,13 @@ export default function ContactMe() {
                                     id="lastname"
                                     required
                                     autoComplete="family-name"
-                                    onChange = {handleInputChange}
+                                    onChange={(e) =>
+                                    {setLastName(e.target.value)}}
+                                    value={lastName}
                                     className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                 />
                             </div>
                         </div>
-                        {/* <div className="sm:col-span-2">
-                            <label htmlFor="company" className="block text-sm font-semibold leading-6 text-gray-900">
-                                Company
-                            </label>
-                            <div className="mt-2.5">
-                                <input
-                                    type="text"
-                                    name="company"
-                                    id="company"
-                                    autoComplete="organization"
-                                    className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                                />
-                            </div>
-                        </div> */}
                         <div className="sm:col-span-2">
                             <label htmlFor="email" className="block text-sm font-semibold leading-6 text-gray-900">
                                 Email
@@ -134,7 +87,9 @@ export default function ContactMe() {
                                     id="email"
                                     required
                                     autoComplete="email"
-                                    onChange = {handleInputChange}
+                                    onChange={(e) =>
+                                    {setEmail(e.target.value)}}
+                                    value={email}
                                     className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                 />
                             </div>
@@ -179,6 +134,9 @@ export default function ContactMe() {
                                 <textarea
                                     name="message"
                                     id="message"
+                                    onChange={(e) =>
+                                    {setMessage(e.target.value)}}
+                                    value={message}
                                     required
                                     rows={4}
                                     className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -194,7 +152,7 @@ export default function ContactMe() {
                                 Submit
                             </button>
                         </div>
-                    </div>    
+                    </div>
                 </form>
             </div>
 
