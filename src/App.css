@@ -3,6 +3,14 @@
 @tailwind components;
 @tailwind utilities;
 
+audio,
+video {
+  display: inline-block;
+}
+
+img {
+  border-style: none;
+}
 .App {
   text-align: center;
 }
